@@ -3,8 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = (env, argv) => {
-  console.log({ env, argv });
-  const isProduction = argv.mode === 'production';
   return {
     mode: 'development',
     entry: './src/index.js',
@@ -39,7 +37,7 @@ module.exports = (env, argv) => {
         template: './src/index.html'
       }),
       new Dotenv({
-        path: `./.env${isProduction ? '.production' : ''}`,
+        systemvars: true,
       }),
     ],
     devServer: {
