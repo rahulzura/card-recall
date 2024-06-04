@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.card-view {
+  margin: 0 auto;
+  width: 700px;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-container {
+  width: 300px;
+  height: 450px;
+  border: 2px solid black;
+  display: flex;
+  flex-flow: column nowrap;
+  overflow: hidden;
+}
+
+.card-container input {
+  border: none;
+}
+
+.card-container input:focus-visible {
+  outline: none;
+}
+
+/* card front */
+.card-front-container {
+  padding: 20px;
+}
+
+.card-front-container>:nth-child(1) {
+  font-size: 300px;
+  height: 90%;
+  text-align: center;
+}
+
+.card-front-container>:nth-child(2) {
+  font-size: 20px;
+  text-align: right;
+  height: 10%;
+}
+
+/* card front end */
+
+/* card back */
+.card-back-container>* {
+  padding: 20px;
+}
+
+.card-back-container>:nth-child(1) {
+  font-size: 30px;
+  height: 20%;
+}
+
+.card-back-container>:nth-child(2) {
+  height: 20%;
+}
+
+.card-back-container>:nth-child(3) {
+  border: 1px solid black;
+  border-left: 0;
+  border-right: 0;
+  height: 20%;
+  padding-left: 0;
+}
+
+.card-back-container>:nth-child(4) {
+  height: 40%;
+}
+
+/* card back end */
